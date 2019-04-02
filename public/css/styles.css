@@ -33,3 +33,15 @@
 	font-size: 12px;
   color: #fff;
 }
+
+.compose-label {
+  display: block;
+  margin-top: 20px;
+}
+
+
+
+.publish-button {
+  display: block;
+  margin-top: 20px;
+}
