@@ -45,10 +45,15 @@ app.get('/compose', function(req, res){
 });
 
 app.post('/compose', function(req, res){
-  let data = req.body.compose;
+  let postTitle = req.body.postTitle;
+  let postBody = req.body.postBody;
 
-  blogPosts.push(data);
-  console.log(data);
+  let postData = {
+    postTitle: postTitle,
+    postBody: postBody
+  }
+
+  console.log(postData);
 });
 
 
