@@ -3,4 +3,9 @@
   <h1>Home</h1>
   <p><%= homeContent %></p>
 
+  <% for (i = 0; i < newBlogPost.length; i++){ %>
+    <h1> <%= newBlogPost[i].postTitle %> </h1>
+    <p> <%= newBlogPost[i].postBody %> </p>
+  <% } %>
+
 <%- include('partials/footer') -%>
