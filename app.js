@@ -26,11 +26,16 @@ app.get('/', function(req, res){
 });
 
 app.get('/posts/:blogPost', function(req, res){
-  const requestedPost = req.params.blogPost;
+  const requestedPost = _.lowerCase(req.params.blogPost);
 
   blogPosts.forEach(function(post){
-    if(requestedPost === post.postTitle){
+    const postTitle = _.lowerCase(post.postTitle);
+
+    if(requestedPost === postTitle){
       console.log('Match found!');
+    } else {
+      console.log('No match found');
+      // console.log('Requested Post: ' + requestedPost + " Post Title: " + post.postTitle);
     }
   });
 });
