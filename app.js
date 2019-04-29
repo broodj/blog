@@ -32,9 +32,18 @@ app.get('/posts/:blogPost', function(req, res){
     const postTitle = _.lowerCase(post.postTitle);
 
     if(requestedPost === postTitle){
-      console.log('Match found!');
+      const title = post.postTitle;
+      const body = post.postBody;
+
+      res.render('post', {
+        title: title,
+        body: body,
+      });
+      
     } else {
       console.log('No match found');
+
+
       // console.log('Requested Post: ' + requestedPost + " Post Title: " + post.postTitle);
     }
   });
