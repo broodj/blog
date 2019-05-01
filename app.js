@@ -39,7 +39,7 @@ app.get('/posts/:blogPost', function(req, res){
         title: title,
         body: body,
       });
-      
+
     } else {
       console.log('No match found');
 
