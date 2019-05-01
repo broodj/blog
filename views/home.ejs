@@ -5,7 +5,11 @@
 
   <% newBlogPost.forEach(function(blogPost){ %>
       <h1> <%= blogPost.postTitle %> </h1>
-      <p class="truncated-post"> <%= blogPost.postBody %> </p>
+      <p>
+        <%= blogPost.postBody.substr(0,100) + " ..." %>
+        <a href="/posts/<%= blogPost.postTitle %>">Read More</a>
+      </p>
+
   <% }); %>
 
 <%- include('partials/footer') -%>

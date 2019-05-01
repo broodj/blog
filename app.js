@@ -19,10 +19,12 @@ app.use(express.static("public"));
 
 
 app.get('/', function(req, res){
+
   res.render('home', {
     homeContent: homeStartingContent,
-    newBlogPost: blogPosts
+    newBlogPost: blogPosts,
   });
+
 });
 
 app.get('/posts/:blogPost', function(req, res){
@@ -42,9 +44,6 @@ app.get('/posts/:blogPost', function(req, res){
 
     } else {
       console.log('No match found');
-
-
-      // console.log('Requested Post: ' + requestedPost + " Post Title: " + post.postTitle);
     }
   });
 });
